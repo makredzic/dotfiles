@@ -27,5 +27,7 @@ if [ -d "~/.config/nvim" ]; then
 fi
 
 $CMD "$DOT_DIR/.config/nvim/init.vim" ~/.config/nvim/init.vim
+$CMD "$DOT_DIR/.config/starship.toml" ~/.config/starship.toml
+
 
 

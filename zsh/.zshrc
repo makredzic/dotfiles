@@ -70,7 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git command-not-found zsh-syntax-highlighting zsh-autosuggestions ssh)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,14 +109,22 @@ alias update="sudo apt update && sudo apt upgrade -y"
 alias connect="globalprotect connect -p ibvpn-prod.infobip.com"
 alias disconnect="globalprotect disconnect"
 
+# Bat alias (if installed)
+if type batcat > /dev/null; then #bat is sometimes installed as batcat depending on OS
+    alias cat="batcat --paging=never"
+elif type bat > /dev/null; then
+    alias cat="bat --paging=never"
+fi
+
 
 # PATH VARIABLE
 export PATH=$PATH:/home/mredzic/idea-IU-242.23339.11/bin:/home/mredzic/Postman/app:/home/mredzic/.local/bin
 
 
+[ -f "/home/mredzic/.ghcup/env" ] && . "/home/mredzic/.ghcup/env" # ghcup-env
+
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
-[ -f "/home/mredzic/.ghcup/env" ] && . "/home/mredzic/.ghcup/env" # ghcup-env
+eval "$(starship init zsh)"
