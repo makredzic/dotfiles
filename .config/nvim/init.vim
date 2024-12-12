@@ -11,3 +11,9 @@ syntax on
 set clipboard=unnamedplus
 set ttyfast
 set noswapfile
+
+call plug#begin()
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+call plug#end()
+
+colorscheme catppuccin-mocha

@@ -3,7 +3,7 @@ This repository holds all the .configfiles that are used by various software app
 
 ## Structure
 - Each directory holds one dotfile which should be symlinked to `~` with the same name.
-- The `.config` file holds the directories and files that should be symlinked to `~/.config/` with the same directory structure (e.g. `dotfiles/.config/vim/init.vim` -> `~/.config/vim.init.vim`)
+- The `.config` file holds the directories and files that should be symlinked to `~/.config/` with the same directory structure (e.g. `dotfiles/.config/vim/init.vim` -> `~/.config/vim/init.vim`)
 
 ## Usage
 - Running `./symlink.sh` will create symlinks for each config file to their expected locations (e.g. `.zshrc` to `~`, `vim.init` to `~/.config/vim/init.vim`, etc.). An additional `-f` flag (or any other) can be passed to the script to replace existing config files with the new symlinks (otherwise, each existing file will cause an error on symlink creation).
@@ -18,4 +18,7 @@ This is the list of additional dependencies that had to be installed on the syst
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 - [bat](https://github.com/sharkdp/bat) *(Needed to set alias cat='bat')*
+
+### Neovim
+- [vim-plug](https://junegunn.github.io/vim-plug/installation/) *(To load nvim plugins in init.vim)*
 
