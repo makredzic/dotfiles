@@ -10,6 +10,11 @@ This repository holds all the .configfiles that are used by various software app
 - Currently, each `ln -s` call is hardcoded in the script and for each addition of a new config file, the script needs to be updated to add a new `ln -s` call.
 - `NixOS` should use its `home-manager` to read the contents of each config file (the `symlink.sh` script should **NOT** be used).
 
+## Setup
+1. Download and install all the dependencies below,
+2. Run `symlink.sh`,
+3. Run `:PlugInstall` inside of `nvim` to install all plugins listed in `./config/nvim/init.lua`
+
 ## Dependencies
 This is the list of additional dependencies that had to be installed on the system for the entire configuration to work.
 
