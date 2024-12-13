@@ -12,7 +12,7 @@ This repository holds all the .configfiles that are used by various software app
 
 ## Setup
 1. Download and install all the dependencies below,
-2. Run `symlink.sh`,
+2. Run `symlink.sh` *(if **NOT** on NixOS)*,
 3. Run `:PlugInstall` inside of `nvim` to install all plugins listed in `./config/nvim/init.lua`
 
 ## Dependencies
