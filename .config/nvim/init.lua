@@ -25,7 +25,8 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 vim.call('plug#end')
 
--- Set colorscheme
-vim.cmd("colorscheme catppuccin-mocha")
-
+-- Activate lualine
 require('lualine').setup()
+
+-- Color theme setup
+vim.cmd.colorscheme("catppuccin-mocha")
