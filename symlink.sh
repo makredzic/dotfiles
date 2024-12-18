@@ -25,6 +25,10 @@ CMD="ln $LN_FLAGS"
 
 $CMD "$DOT_DIR/wezterm/.wezterm.lua" ~/.wezterm.lua
 $CMD "$DOT_DIR/zsh/.zshrc" ~/.zshrc
+$CMD "$DOT_DIR/.themes" ~/
+$CMD "$DOT_DIR/.icons" ~/
+
+
 
 
 #
