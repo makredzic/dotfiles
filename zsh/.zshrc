@@ -120,6 +120,8 @@ fi
 # PATH VARIABLE
 export PATH=$PATH:/home/mredzic/idea-IU-242.23339.11/bin:/home/mredzic/Postman/app:/home/mredzic/.local/bin
 
+export EDITOR=/usr/bin/nvim
+
 
 [ -f "/home/mredzic/.ghcup/env" ] && . "/home/mredzic/.ghcup/env" # ghcup-env
 
@@ -128,3 +130,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
