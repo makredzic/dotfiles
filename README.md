@@ -26,4 +26,6 @@ This is the list of additional dependencies that had to be installed on the syst
 
 ### Neovim
 - [vim-plug](https://junegunn.github.io/vim-plug/installation/) *(To load nvim plugins in init.vim)*
+- [fd](https://github.com/sharkdp/fd) *(For the plugin nvim-telescope)*
+- [ripgrep](https://github.com/BurntSushi/ripgrep) *(For the plugin nvim-telescope)*
 
