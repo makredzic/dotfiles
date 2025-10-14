@@ -108,7 +108,7 @@ flake-cpp() {
 # ALIASES
 alias vpnon="globalprotect connect -p ibvpn-prod.infobip.com"
 alias vpnoff="globalprotect disconnect"
-alias vpnstatus="globalprotect status --show"
+alias vpnstatus="globalprotect show --status"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
