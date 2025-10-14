@@ -7,7 +7,6 @@ This repository holds all the .configfiles that make your terminal shell nicer t
 
 # Setup
 1. Download and install all the dependencies below. Install them however you wish on your system, they just need to be there.
-2. 
 2. Run `symlink.sh` *(if **NOT** on NixOS)*
 3. Run `:PlugInstall` inside of `nvim` to install all the plugins listed in `./config/nvim/init.lua`
 
@@ -23,6 +22,7 @@ This is the list of additional dependencies that had to be installed on the syst
 - [bat](https://github.com/sharkdp/bat) *(Needed to set alias cat='bat')*
 
 ### Neovim
+- [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package)
 - [vim-plug](https://junegunn.github.io/vim-plug/installation/) *(To load nvim plugins in init.vim)*
 - [fd](https://github.com/sharkdp/fd) *(For the plugin nvim-telescope)*
 - [ripgrep](https://github.com/BurntSushi/ripgrep) *(For the plugin nvim-telescope)*
