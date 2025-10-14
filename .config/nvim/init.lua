@@ -69,25 +69,26 @@ require('nvim-treesitter.configs').setup {
 }
 
 require("mason").setup()
-require("mason-lspconfig").setup {
-  -- automatically install language servers setup below for lspconfig
-  automatic_installation = true,
-  ensure_installed = { "lua_ls", "quick_lint_js", "pyre", "markdown_oxide"}
-}
+-- 2) Optional: tweak specific servers BEFORE enabling
+--    (Example for Lua: recognize the global 'vim')
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      diagnostics = { globals = { 'vim' } },
+    },
+  },
+})
 
-require("mason-lspconfig").setup_handlers {
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {}
-    end
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- For example, a handler override for the `rust_analyzer`:
-    --["rust_analyzer"] = function ()
-        --require("rust-tools").setup {}
-    --end
-}
+-- 3) Mason-lspconfig (installer + auto-enable)
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "lua_ls",
+    -- Replace these with the exact server names you use and that exist in nvim-lspconfig:
+    -- "pyright" or "pyrefly" (Python), "marksman" (Markdown), etc.
+    -- "quick_lint_js" is a linter that *can* speak LSP, but double-check how you want to run it.
+  },
+  automatic_enable = true,  -- v2 style; replaces old handlers boilerplate
+})
 
 -- 
 -- BINDINGS
