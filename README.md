@@ -7,7 +7,7 @@ This repository holds all the .configfiles that make your terminal shell nicer t
 
 # Setup
 1. Download and install all the dependencies below. Install them however you wish on your system, they just need to be there.
-2. *Double check `zsh/.zshrc` and delete anything/everything you might need under the REMOVE THESE section.*
+2. **Double check `zsh/.zshrc` and delete anything/everything you might not need under the REMOVE THESE section.**
 3. Run `symlink.sh` *(if **NOT** on NixOS)*
 4. Run `:PlugInstall` inside of `nvim` to install all the plugins listed in `./config/nvim/init.lua`
 
