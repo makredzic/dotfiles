@@ -23,7 +23,7 @@ This is the list of additional dependencies that had to be installed on the syst
 - [bat](https://github.com/sharkdp/bat) *(Needed to set alias cat='bat')*
 
 ### Neovim
-- [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package)
+- [neovim v0.11+](https://github.com/neovim/neovim/releases/tag/nightly)
 - [vim-plug](https://junegunn.github.io/vim-plug/installation/) *(To load nvim plugins in init.vim)*
 - [fd](https://github.com/sharkdp/fd) *(For the plugin nvim-telescope)*
 - [ripgrep](https://github.com/BurntSushi/ripgrep) *(For the plugin nvim-telescope)*
