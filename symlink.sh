@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_DIR=pwd
+DOT_DIR=$(pwd)
 LN_FLAGS="-s"
 
 # Append additional flags to ln
